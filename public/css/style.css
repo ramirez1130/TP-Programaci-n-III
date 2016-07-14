@@ -1,0 +1,21 @@
+.action{
+    font-size:25px;
+    cursor:pointer;
+    color:#337ab7;
+    background:none;
+    border:none;
+}
+
+.action:hover{
+    text-decoration: none;
+    color:#23527c;
+}
+
+.active{
+    font-weight:bold;
+}
+
+th{
+    background:#999;
+    color:#fff;
+}
