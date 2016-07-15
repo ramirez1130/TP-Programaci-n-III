@@ -5,8 +5,8 @@
 @section('content')
     @if($errors->any())
         <ul class="alert alert-danger">
-            @foreach($errors->all() as $unError)
-                <li>{{ $unError }}</li>
+            @foreach($errors->all() as $error)
+                <li>{{ $error }}</li>
             @endforeach
         </ul>
     @endif
@@ -24,8 +24,12 @@
         <?= Form::number('star', null, ['class' => 'form-control', 'min' => '1' , 'max' => '5']);?>
     </div>
     <div class="form-group col-lg-11">
-        <?= Form::label('city', 'Ciudad del Hotel:', ['class' => 'control-label']);?>
-        <?= Form::select('city', $cities , null, ['class' => 'form-control']);?>
+        <?= Form::label('id_city', 'Ciudad del Hotel:', ['class' => 'control-label']);?>
+        <?= Form::select('id_city', $cities , null, ['class' => 'form-control']);?>
+    </div>
+    <div class="form-group col-lg-12">
+        <?= Form::label('description', 'Descripcion:', ['class' => 'control-label']);?>
+        <?= Form::textarea('description' , null, ['class' => 'form-control','placeholder'=>'Opcional']);?>
     </div>
     <div class="form-group col-lg-12">
         <?= Form::label('picture', 'Imagen del Hotel:', ['class' => 'control-label']);?>

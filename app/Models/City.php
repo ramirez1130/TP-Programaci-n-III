@@ -15,6 +15,6 @@ class City extends Model
     }
     
     public function hotel(){
-        return $this->hasMany(Hotel::class);
+        return $this->hasMany(Hotel::class,'id_city','id_city');
     }
 }

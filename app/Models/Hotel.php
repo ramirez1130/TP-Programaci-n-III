@@ -10,7 +10,7 @@ class Hotel extends Model
     protected $table = 'hotels';
     protected $primaryKey = 'id_hotel';
 
-    protected $fillable = ['name','price','star','main_picture','city'];
+    protected $fillable = ['name','price','star','main_picture','description','id_city'];
 
     public $timestamps = false;
     
@@ -19,11 +19,11 @@ class Hotel extends Model
         'price'     => 'required|numeric',
         'star'     => 'required',
         'picture'   => 'image',
-        'city'      => 'required'
+        'id_city'      => 'required'
     ];
 
     public function city(){
-        return $this->belongsTo(City::class,'city','id_city');
+        return $this->belongsTo(City::class,'id_city','id_city');
     }
 
     public function service(){

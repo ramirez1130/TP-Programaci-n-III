@@ -19,7 +19,7 @@
                 <td>${{$hotel->price}}</td>
                 <td>{{$hotel->star}}</td>
                 <td>{{$hotel->rating}}</td>
-                <td>{{$hotel->city}}</td>
+                <td>{{$hotel->city->name}}</td>
                 <td>
                     <div class="col-lg-6">
                         <?= link_to_route('hotel.editForm', '',[$hotel->id_hotel],['class'=>'fa fa-pencil-square-o action']) ?>
